@@ -1,0 +1,166 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge($utilities,
+        ("color": map-merge(map-get($utilities, "color"),
+                (values: map-merge(map-get(map-get($utilities, "color"), "values"),
+                        ($all-colors ),
+                    ),
+                ),
+            ),
+        ));
+
+
+
+@import "bootstrap/scss/utilities/api";
+
+
+.bg-gray-200 {
+ background-color: #e9ecef;   
+}
+.bg-gray-300 {
+ background-color: #dee2e6;   
+}
+.bg-gray-400 {
+ background-color: #ced4da;   
+}
+.bg-gray-500 {
+ background-color: #adb5bd;   
+}
+.bg-gray-600 {
+ background-color: #6c757d;   
+}
+.bg-gray-700 {
+ background-color: #495057;   
+}
+.bg-gray-800 {
+ background-color: #343a40;   
+}
+.bg-gray-900 {
+ background-color: #212529;   
+}
+
+
+.border-gray-200 {
+ border: 1px solid #e9ecef;   
+}
+.border-gray-300 {
+ border: 1px solid #dee2e6;   
+}
+.border-gray-400 {
+ border: 1px solid #ced4da;   
+}
+.border-gray-500 {
+ border: 1px solid #adb5bd;   
+}
+.border-gray-600 {
+ border: 1px solid #6c757d;   
+}
+.border-gray-700 {
+ border: 1px solid #495057;   
+}
+.border-gray-800 {
+ border: 1px solid #343a40;   
+}
+.border-gray-900 {
+ border: 1px solid #212529;   
+}
+
+
+.text-gray-200 {
+    color: #e9ecef;
+}
+
+.text-gray-300 {
+    color: #dee2e6;
+}
+
+.text-gray-400 {
+    color: #ced4da;
+}
+
+.text-gray-500 {
+    color: #adb5bd;
+}
+
+.text-gray-600 {
+    color: #6c757d;
+}
+
+.text-gray-700 {
+    color: #495057;
+}
+
+.text-gray-800 {
+    color: #343a40;
+}
+
+.text-gray-900 {
+    color: #212529;
+}
+
+.fill-gray {
+    fill: #6c757d !important;
+
+    .hover-fill {
+        fill: $gray-100;
+    }
+}
+
+
+.transform-scale {
+    transform: scale(2);
+}
+
+
+
+.hpx-150 {
+    height: 150px;    
+}
+    
+.wpx-230 {
+    width: 230px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+.hover {
+    transition: ease-in-out 0.1s;
+    outline: 2px solid #212529;
+    outline-offset: 5px;
+
+    &:hover {
+            background-color: $gray-500 !important;
+            border: $gray-600 !important;
+            outline: 2px solid $gray-500;
+
+        }
+}
+
+
+.note-container {
+    height: 100vh;
+}
+
+
+.main {
+    height: 100vh;
+}
+
+.note-card {
+    transition: .2s;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: #495057;
+    }
+}
