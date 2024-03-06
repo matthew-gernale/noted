@@ -7,7 +7,7 @@ import Layout from "./components/Layout";
 
 function App() {
   return (
-     <BrowserRouter>
+     <BrowserRouter basename="/noted">
       <Routes> 
         <Route path="/" element={<Layout/>}>
         </Route>
